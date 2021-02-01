@@ -1,0 +1,49 @@
+{
+    "name": "eagromarket_orchestadirector",
+    "version": "1.0.0",
+    "description": "This API-BackEnd app is made for eAgroMarket.",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon src/index.js",
+        "build": "babel src --out-dir build",
+        "start": "node src/index.js"
+    },
+    "keywords": [
+        "API",
+        "BackEnd",
+        "E-Commerce",
+        "MongoDB",
+        "AHTENDAT"
+    ],
+    "author": "ATHENDAT | Team - PA004",
+    "license": "ISC",
+    "dependencies": {
+        "awilix": "^4.3.1",
+        "bcrypt": "^5.0.0",
+        "compression": "^1.7.4",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-async-errors": "^3.1.1",
+        "express-device": "^0.4.2",
+        "express-fileupload": "^1.2.0",
+        "express-validator": "^6.9.0",
+        "helmet": "^4.3.1",
+        "jsonwebtoken": "^8.5.1",
+        "memory-cache": "^0.2.0",
+        "mongoose": "^5.11.9",
+        "morgan": "^1.10.0",
+        "multer": "^1.4.2",
+        "swagger-ui-express": "^4.1.6",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.12.10",
+        "@babel/core": "^7.12.10",
+        "@babel/node": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "jest": "^26.6.3",
+        "mockingoose": "^2.13.2",
+        "nodemon": "^2.0.6"
+    }
+}

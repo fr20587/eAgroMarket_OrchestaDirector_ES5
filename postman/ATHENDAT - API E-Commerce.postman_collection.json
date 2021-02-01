@@ -1,0 +1,2385 @@
+{
+	"info": {
+		"_postman_id": "1fb4525a-dda3-44f0-8e37-2d44b9270e91",
+		"name": "ATHENDAT | API E-Commerce",
+		"description": "Esta API gestiona las operaciones CRUD de los Productos en la DB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "/api/auth/signUpClient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"\",\r\n    \"email\": \"\",\r\n    \"password\": \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signUpClient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signUpClient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/auth/signInClient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"fr0789@gmail.com\",\r\n    \"password\": \"password\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signInClient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signInClient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/auth/signInUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@localhost.com\",\r\n    \"password\": \"admin\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signInUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signInUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/auth/renewToken",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/renewToken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"renewToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/auth/renewUserToken",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY1MDFlOGNhYzBiMTE5YzdkNmEwYiIsImlhdCI6MTYwOTY4NTE1NCwiZXhwIjoxNjA5Njk1OTU0fQ.2Uw4z3bpGkr0IxvcXxz5AAtllWJsFaZWD_9rJNCh0dY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/renewUserToken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"renewUserToken"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Basket",
+			"item": [
+				{
+					"name": "http://localhost:3000/api/basket/createBasket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"21cd6929-3f35-4898-97f4-be175b512f7a\",\r\n    \"items\": [\r\n        { \r\n            \"producId\": \"5f6fdeef162e7607fc2fd506\",\r\n            \"productName\": \"Pizza Margarita\",\r\n            \"quantity\": 2,\r\n            \"salePrice\": \"55.00\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/basket/createBasket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"basket",
+								"createBasket"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Brand",
+			"item": [
+				{
+					"name": "/api/brand",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDM3YWIyY2U2Njc0MmM5YzRkYWRhNiIsImlhdCI6MTYxMTE5MDY1NywiZXhwIjoxNjExMjAxNDU3fQ.TYYKUOjegzupXO6NmElDaWotwjpgyf5vwaRHNLJlgug",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/brand/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"brand",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Buscar",
+			"item": [
+				{
+					"name": "/api/search/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY1MDFlOGNhYzBiMTE5YzdkNmEwYiIsImlhdCI6MTYwOTU1NTE4OCwiZXhwIjoxNjA5NTY1OTg4fQ.1egmIV-44JPcLBHcwu0SvF-0xULfP31-38LTXvvmyq8"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/search/ham",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"search",
+								"ham"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/search/colection/document",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY1MDFlOGNhYzBiMTE5YzdkNmEwYiIsImlhdCI6MTYwOTU1NTE4OCwiZXhwIjoxNjA5NTY1OTg4fQ.1egmIV-44JPcLBHcwu0SvF-0xULfP31-38LTXvvmyq8"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/search/colection/products/ham",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"search",
+								"colection",
+								"products",
+								"ham"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "/api/category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY1MDFlOGNhYzBiMTE5YzdkNmEwYiIsImlhdCI6MTYwOTQzNzQ2MCwiZXhwIjoxNjA5NDQ4MjYwfQ.6zfHrS_FGKI3gSLJ3EHWCnDqmDgEnZzN-tEIDaZfMts",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Postres\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/category/categoryId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/category/categoryId",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/category/categoryId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "/api/client",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/client",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/client/clientId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/client/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"client",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/client/clientId",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Frank Rodríguez\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/client/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"client",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/client/clientId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/client/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"client",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Contact Message",
+			"item": [
+				{
+					"name": "/api/message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Frank\",\r\n    \"email\": \"fr20587@gamil.com\",\r\n    \"subject\": \"Queja\",\r\n    \"message\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/message",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/message/:id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/message/600c56ccc2b11d1ad8342a3d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"message",
+								"600c56ccc2b11d1ad8342a3d"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Delivery Cost",
+			"item": [
+				{
+					"name": "/api/delivery",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/delivery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"delivery"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/delivery",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/delivery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"delivery"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/delivery/deliveryCostId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/delivery/5fc7f58056d12134f027dc24",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"delivery",
+								"5fc7f58056d12134f027dc24"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/delivery/deliveryCostId",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/delivery/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"delivery",
+								""
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/delivery/deliveryCostId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/delivery/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"delivery",
+								""
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Delivery Method",
+			"item": [
+				{
+					"name": "/api/deliveryMethod",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/deliveryMethod/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"deliveryMethod",
+								""
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/deliveryMethod",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/deliveryMethod",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"deliveryMethod"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/deliveryMethod/deliveryMethodId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/deliveryMethod/5fc8363ec89501255ceb43e4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"deliveryMethod",
+								"5fc8363ec89501255ceb43e4"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/deliveryMethod/deliveryMethodId",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Entrega a Domicilio\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/deliveryMethod/5fc8363ec89501255ceb43e4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"deliveryMethod",
+								"5fc8363ec89501255ceb43e4"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/deliveryMethod/deliveryMethodId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/api/deliveryMethod/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"api",
+								"deliveryMethod",
+								""
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "currentPage",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "pageNum",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "/api/order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjUxM2ZlNjI5MmY0MTNhOGU0NjJhNSIsImlhdCI6MTYwMDQ4MTYyNCwiZXhwIjoxNjAwNDkyNDI0fQ.7xJT0XXpB40hGA_WY46Kd3VnyVeK_IlrHdkWmg_ZCLo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"products\": [\r\n        { \r\n            \"productName\": \"Pizza Sensación\",\r\n            \"qty\": 2,\r\n            \"price\": \"49.99\"\r\n        }\r\n    ],\r\n    \"subTotal\": 253.95,\r\n    \"deliveryCost\": 35,\r\n    \"total\": 288.95,\r\n    \"city\": \"Playa\",\r\n    \"address\": \"3ra 254\",\r\n    \"street1\": \"1\",\r\n    \"street2\": \"2\",\r\n    \"name\": \"Frank\",\r\n    \"lastName1\": \"R.\",\r\n    \"lastName2\": \"López\",\r\n    \"email\": \"f@f.com\",\r\n    \"phone\": \"52541322\",\r\n    \"paymentMethod\": \"efectivo\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjUxM2ZlNjI5MmY0MTNhOGU0NjJhNSIsImlhdCI6MTYwMDQ4MTYyNCwiZXhwIjoxNjAwNDkyNDI0fQ.7xJT0XXpB40hGA_WY46Kd3VnyVeK_IlrHdkWmg_ZCLo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/order/orderId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY1MDFlOGNhYzBiMTE5YzdkNmEwYiIsImlhdCI6MTYwMDU0MDczMiwiZXhwIjoxNjAwNTUxNTMyfQ.KOo_oKGxKgImeMJWcEqMXNTcjmqqDdqTmhCfoR4F8Pk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/order/5f665319f8c342185cef2782",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"5f665319f8c342185cef2782"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/order/clientId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY3NGNiZWRhMzA2MjRkNDRkNjQ0YSIsImlhdCI6MTYwMDU1NTM5MiwiZXhwIjoxNjAwNTY2MTkyfQ.wht-eaVkO5xpb5rtfgXjBJH7PW9Atgr7DW5ANt0uvrs"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/order/5f6674cbeda30624d44d644a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"5f6674cbeda30624d44d644a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/order/orderId",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjUxM2ZlNjI5MmY0MTNhOGU0NjJhNSIsImlhdCI6MTYwMDQ4MTYyNCwiZXhwIjoxNjAwNDkyNDI0fQ.7xJT0XXpB40hGA_WY46Kd3VnyVeK_IlrHdkWmg_ZCLo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"products\": [\r\n        { \r\n            \"productName\": \"Pizza Mixta\",\r\n            \"qty\": 5,\r\n            \"price\": \"49.99\"\r\n        }\r\n    ],\r\n    \"subTotal\": 350.85,\r\n    \"deliveryCost\": 35,\r\n    \"total\": 385.85,\r\n    \"city\": \"Playa\",\r\n    \"address\": \"3ra 254\",\r\n    \"street1\": \"1\",\r\n    \"street2\": \"2\",\r\n    \"name\": \"Frank\",\r\n    \"lastName1\": \"R.\",\r\n    \"lastName2\": \"López\",\r\n    \"email\": \"f@f.com\",\r\n    \"phone\": \"52541322\",\r\n    \"paymentMethod\": \"efectivo\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/order/5f66758d9add881c2c7a7cfa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"5f66758d9add881c2c7a7cfa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/order/orderId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-access-token",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjUxM2ZlNjI5MmY0MTNhOGU0NjJhNSIsImlhdCI6MTYwMDQ4MTYyNCwiZXhwIjoxNjAwNDkyNDI0fQ.7xJT0XXpB40hGA_WY46Kd3VnyVeK_IlrHdkWmg_ZCLo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"products\": [\r\n        { \r\n            \"productName\": \"Pizza Mixta\",\r\n            \"qty\": 5,\r\n            \"price\": \"49.99\"\r\n        }\r\n    ],\r\n    \"subTotal\": 350.85,\r\n    \"deliveryCost\": 35,\r\n    \"total\": 385.85,\r\n    \"city\": \"Playa\",\r\n    \"address\": \"3ra 254\",\r\n    \"street1\": \"1\",\r\n    \"street2\": \"2\",\r\n    \"name\": \"Frank\",\r\n    \"lastName1\": \"R.\",\r\n    \"lastName2\": \"López\",\r\n    \"email\": \"f@f.com\",\r\n    \"phone\": \"52541322\",\r\n    \"paymentMethod\": \"efectivo\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/order/5f66758d9add881c2c7a7cfa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"5f66758d9add881c2c7a7cfa"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "/api/product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY1MDFlOGNhYzBiMTE5YzdkNmEwYiIsImlhdCI6MTYwOTUxMjU5NywiZXhwIjoxNjA5NTIzMzk3fQ.FH-LMJlK1jD36EqR7dsBNli7wg8VVohaPtEqvTqqeeM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hamburguesa vegetariana\",\r\n    \"cost\": \"30\",\r\n    \"price\": \"35\", \r\n    \"salePrice\": \"30\", \r\n    \"discount\": \"0\",\r\n    \"shortDetails\": \"\",\r\n    \"ingredients\": [\r\n        \"vegetales\",\r\n        \"maní\",\r\n        \"mango\",\r\n        \"curry\"\r\n        ],\r\n    \"description\": \"Se destacan por su tamaño, pero también por sus ingredientes. Algunos menúes incluyen papas fritas y tartas de queso caseras. Hamburguesas saludables, deliciosas y muy aclamadas, considerando el auge de dietas vegetarianas y veganas alrededor del mundo. Está es una excelente opción para deleitarte sin culpas, sobre todo si la acompañas con salsas caseras como las de maní, curry o mango.\",\r\n    \"imageUrl\": \"\",\r\n    \"stock\": \"5\",\r\n    \"newItem\": \"false\",\r\n    \"newSupplier\": \"false\",\r\n    \"supplier\": \"ATHENDAT\",\r\n    \"brand\": \"PizzaCub\",\r\n    \"category\": \"Hamburguesas\",\r\n    \"tags\": [\"Panes\"],\r\n    //\"color\": [\"\"],\r\n    \"onSale\": \"true\"    \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/product/productId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pizza Negra\",\r\n    \"price\": \"80\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/5f6fe67d162e7607fc2fd513",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"5f6fe67d162e7607fc2fd513"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/product/categoryId/all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/category/5f710d1c602735288ccd505e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"category",
+								"5f710d1c602735288ccd505e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/product/ingredientsId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pizza Negra\",\r\n    \"price\": \"80\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/product/productId",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pizza Negra\",\r\n    \"price\": \"80\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/product/productId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pizza Negra\",\r\n    \"price\": \"80\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/5f63c6c76e30842d700ad489",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"5f63c6c76e30842d700ad489"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "/api/role",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDM3YWIyY2U2Njc0MmM5YzRkYWRhNiIsImlhdCI6MTYxMTE5MDY1NywiZXhwIjoxNjExMjAxNDU3fQ.TYYKUOjegzupXO6NmElDaWotwjpgyf5vwaRHNLJlgug",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/role/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"role",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "/api/supplier",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDM3YWIyY2U2Njc0MmM5YzRkYWRhNiIsImlhdCI6MTYxMTE5MDY1NywiZXhwIjoxNjExMjAxNDU3fQ.TYYKUOjegzupXO6NmElDaWotwjpgyf5vwaRHNLJlgug",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/supplier/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"supplier",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Upload",
+			"item": [
+				{
+					"name": "/api/upload",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY1MDFlOGNhYzBiMTE5YzdkNmEwYiIsImlhdCI6MTYwOTUxMjU5NywiZXhwIjoxNjA5NTIzMzk3fQ.FH-LMJlK1jD36EqR7dsBNli7wg8VVohaPtEqvTqqeeM",
+								"type": "text"
+							},
+							{
+								"key": "file",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/Biblioteca/Documentos/Frank/Marcas/personal.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/upload/users/5f95b9eacad9f933b0d3bfbb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"upload",
+								"users",
+								"5f95b9eacad9f933b0d3bfbb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/upload",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY1MDFlOGNhYzBiMTE5YzdkNmEwYiIsImlhdCI6MTYwOTUxMjU5NywiZXhwIjoxNjA5NTIzMzk3fQ.FH-LMJlK1jD36EqR7dsBNli7wg8VVohaPtEqvTqqeeM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/upload/users/19860a63-aa11-4cd4-8430-fb7a1c67aed1.png",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"upload",
+								"users",
+								"19860a63-aa11-4cd4-8430-fb7a1c67aed1.png"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "/api/user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY1MDFlOGNhYzBiMTE5YzdkNmEwYiIsImlhdCI6MTYwOTQzNzQ2MCwiZXhwIjoxNjA5NDQ4MjYwfQ.6zfHrS_FGKI3gSLJ3EHWCnDqmDgEnZzN-tEIDaZfMts",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"frankRL\",\r\n    \"email\": \"fr0790@outlook.com\",\r\n    \"password\": \"password\",\r\n    \"roles\": [\"admin\", \"moderator\"]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY1MDFlOGNhYzBiMTE5YzdkNmEwYiIsImlhdCI6MTYwOTQzNzQ2MCwiZXhwIjoxNjA5NDQ4MjYwfQ.6zfHrS_FGKI3gSLJ3EHWCnDqmDgEnZzN-tEIDaZfMts",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/user/userId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY1MDFlOGNhYzBiMTE5YzdkNmEwYiIsImlhdCI6MTYwOTUxMjU5NywiZXhwIjoxNjA5NTIzMzk3fQ.FH-LMJlK1jD36EqR7dsBNli7wg8VVohaPtEqvTqqeeM",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/5f95b9eacad9f933b0d3bfbb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"5f95b9eacad9f933b0d3bfbb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/user/userId",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjY1MDFlOGNhYzBiMTE5YzdkNmEwYiIsImlhdCI6MTYxMDIwNTMwNiwiZXhwIjoxNjEwMjE2MTA2fQ.AXsvGRWjmGeiCX0t0JTdhYRhZwD5h0nBRsWx4U-PMEo",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/user/userId",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNjUxNzgxN2E5NjU2MzYyYzMyOWM2YyIsImlhdCI6MTYwMDQ2MDcxOSwiZXhwIjoxNjAwNDcxNTE5fQ.A30q0cOD36Za4J3ZkHfkhTmHWO-NOh3_cMc4sbVYVOE",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/5f651885ec227f08b09aac2f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"5f651885ec227f08b09aac2f"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Unit",
+			"item": [
+				{
+					"name": "/api/unit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Caja\",\r\n    \"initial\": \"C\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/unit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"unit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/unit",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/unit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"unit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/unit/:id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/unit/601239b91def23306804e500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"unit",
+								"601239b91def23306804e500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/unit/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/unit/601239b91def23306804e500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"unit",
+								"601239b91def23306804e500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/unit/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"type": "text",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/unit/601239b91def23306804e500",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"unit",
+								"601239b91def23306804e500"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
