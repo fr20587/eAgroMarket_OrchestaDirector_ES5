@@ -1,10 +1,10 @@
 'use strict';
 
-var _mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
-var _mongoose2 = _interopRequireDefault(_mongoose);
+//var _mongoose2 = _interopRequireDefault(mongoose);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+//function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /* _mongoose2.default.connect('mongodb://localhost/AgroMarketDB', {
     useNewUrlParser: true,
