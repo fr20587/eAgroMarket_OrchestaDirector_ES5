@@ -33,5 +33,3 @@ siempre la integridad de la plataforma la protección de los datos de todos los 
 
 Los paquetes utilizados en el desarrollo de esta aplicación pueden ser consultados en el archivo `package.json`. Para más información sobre los mismos visitar el sitio: `https://www.npmjs.com`.
 
-###
-# mongodb+srv://athendat:<iLV.Dg4:kBYMbf.>@eagromarket.t0kl5.mongodb.net/<dbname>?retryWrites=true&w=majority
